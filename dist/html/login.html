@@ -4,44 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/login.css">
-    <title>Document</title>
+    <title>Welcome to postIt! Please Log In</title>
 </head>
 <body>
-    <section>
-        <div class="left-img">
 
-            <img src="../../assets/images/paper-airplane.png" alt="">
+    <!--outer content container-->
+    <section>
+
+        <!-- logo container -->
+        <div class="page-logo">
+
+            <img src="../../assets/images/paper-airplane.png" alt="PostIt Logo">
 
         </div>
-        <div class="top-layer">
+
+        <!-- inner content container -->
+        <div class="login-layer">
             <div class="login-container">
-                <div class="vertical">
+                <div class="flex-content">
 
                     <p>Welcome to postIt!</p>
 
-                    <p class="txtSmall">
+                    <p class="small">
                         <a href="#">Create an Account</a>
                     </p>
 
-                    <p class="txtSmall">Or</p>
+                    <p class="small">Or</p>
 
                     <p>Please Log In</p>
 
                 </div>
-                <div class="vertical">
 
-                    <input type="email" name="email" id="emailBox" placeholder="Email">
-                    <input type="password" name="password" id="passBox" placeholder="Password">
+                <!-- Log In Form-->
+                <form class="flex-content" autocomplete="off">
 
-                    <button type="submit" class="button" onclick="location.href='../../dist/html/index.html';">Log In</button>
+                    <!-- email input -->
+                    <input type="email" name="email"
+                        class="form-input" id="email-input" 
+                        placeholder="   Email" autocomplete="off" 
+                        autofocus>      <!-- For testing, email is: name@mail.com -->
 
-                    <p class="txtSmaller">
+                    <!-- password input -->
+                    <input type="password" name="password" 
+                        class="form-input" id="password-input" 
+                        placeholder="   Password" autocomplete="new-password">
+                                        <!-- For testing, password is: 1234 -->
+
+                    <button type="submit" id="login-button">Log In</button>
+
+                    <p class="smaller">
                         <a href="#">Forgot password?</a>
                     </p>
 
-                </div>
+                </form>
             </div>
         </div>
     </section>
+
+    <script src="../scripts/login.js"></script>
+
 </body>
 </html>

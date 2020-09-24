@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    user-select: none; /*might cause problems
+        Porperty is nonstandard. Was suggested to not use it.   ¯\_(ツ)_/¯   */
 }
 
 body {
@@ -31,29 +33,28 @@ section {
     height: inherit;
 }
 
-.vertical {
+.flex-content {
     text-align: center;
-    /* height: 100%; */
     width: 50%;
-    display: flex;
+    display: flex;          /* flex in use */
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 6;
 }
 
-.vertical:first-child::before {
+.flex-content:first-child::before {
     content: '';
     display: block;
     clear: both;
     height: 50px;
 }
-.vertical:last-child::after {
+.flex-content:last-child::after {
     content: '';
     display: block;
     clear: both;
     height: 30px;
 }
-.vertical:last-child {
+.flex-content:last-child {
     flex-grow: 4;
     justify-content: space-around;
 }
@@ -63,28 +64,36 @@ section {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(50,50,50);
 }
-.txtSmaller {
+.smaller {
     font-size: .7em;
 }
-.txtSmall {
+.small {                                    /* class selector 1*/
     font-size: .9em;
 }
 
-input {
+input[class="form-input"] {               /* class selector 2*/
     width: 90%;
     align-self: center;
     height: 17%;
     margin: 5px;
-    border: 1px solid;
+    color: transparent;
+    text-shadow: 0px 0px .5px rgb(49, 49, 49);
+    border: 1px solid gray;
     border-radius: 3px;
     padding: 10px;
-    outline: none;
-}
-#emailBox, #passBox {
+    padding-left: 5px;
     font-size: .8em;
-    padding-left: 20px;
 }
-.button {
+.form-input::placeholder {
+    text-shadow: 0px 0px .5px rgb(105, 105, 105);
+}
+
+.form-input:placeholder-shown {
+    font-size: .8em;
+    box-shadow: none;
+}
+
+#login-button {             /* ID selector */
     align-self: center;
     width: 30%;
     height: 15%;
@@ -93,21 +102,38 @@ input {
     color: #ffffff;
     border: 1px solid rgb(34, 89, 209);
     border-radius: 7px;
-    outline: none;
-}
-.vertical p a {
-    color: #6da7ff;
-    outline: none;
 }
 
-.left-img {
+#login-button:hover {       /* pseude-class selector */
+    background-color: #317ae9;
+    border: 1px solid #317ae9;
+    cursor: pointer;
+}
+
+.flex-content p > a {
+    color: #6da7ff;
+}
+
+.page-logo {
     position: absolute;
 }
-.left-img img {
+.page-logo img {            /* decendant selector */
     position: relative;
     top: 20px;
     left: 20px;
 }
-.top-layer {
+.login-layer {
     height: inherit;
+}
+
+p > a:hover {               /* Child selector */
+    color:#5a98f7;
+}
+
+#password-input + button {  /* Adjacent sibling selector */
+    outline: none;
+}
+
+#login-button ~ * {         /* General sibling selector*/
+    outline: none;
 }
