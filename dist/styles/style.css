@@ -28,7 +28,7 @@ nav div img{
     height: 100%;
     flex-grow: 4;
 }
- /* user picture, siin vaja teha nii et pilt oleks vasakule tõstetud */
+ /* User picture navigation bar */
 #userpicture {
     height: 100%;
     position: relative;
