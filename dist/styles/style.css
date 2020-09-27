@@ -1,5 +1,8 @@
 body {
     background: #2671e2;
+}
+
+* {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -12,6 +15,7 @@ nav {
     top: 0;
     z-index: 	1;
     position: fixed;
+    left: 0%;
 }
 
 nav div{
@@ -63,6 +67,7 @@ section {
 
 ul {
     list-style-type: none;
+    padding: 0;
 }
 
 /*First line of post*/
@@ -88,18 +93,23 @@ h1 {
     margin-left: auto;
 }
 
+/*Posted text*/
+h2 {
+    font-size: 1.4em;
+    padding-left: 10px;
+}
+
 /*Posted picture*/
 #picture {
     height: 500px;
-    width:100%;
-    padding: 5px;
+    width: 100%;
     flex-grow: 4;
 }
 
 
 /*Thumbs up icon*/
 #thumbs-up {
-    height: 30px;
+    width: 45px;
     padding: 10px;
 }
 
