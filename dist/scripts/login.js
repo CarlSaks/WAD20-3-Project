@@ -11,7 +11,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (credentials.has(email) && credentials.get(email) === passw) {
         
-        window.location.href = "../html/feed.html";
+        location.href = "../html/feed.html";
     }
 
     if ( !(credentials.has(email))) {
