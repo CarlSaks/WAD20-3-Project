@@ -22,6 +22,11 @@ nav div{
 
 nav div img{
     height: 100%;
+    flex-grow: 4;
+}
+ /* user picture, siin vaja teha nii et pilt oleks vasakule tõstetud */
+#userpicture {
+    height: 100%;
 }
 
 nav div.search > input {
@@ -83,10 +88,12 @@ h1 {
 
 /*Posted picture*/
 #picture {
-    height: 300px;
+    height: 500px;
+    width:100%;
     padding: 5px;
     flex-grow: 4;
 }
+
 
 /*Thumbs up icon*/
 #thumbs-up {
