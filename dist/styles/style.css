@@ -84,7 +84,7 @@ h1 {
 /*Posted picture*/
 #picture {
     height: 300px;
-    padding: 20px;
+    padding: 5px;
     flex-grow: 4;
 }
 
