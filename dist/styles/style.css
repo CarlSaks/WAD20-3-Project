@@ -27,6 +27,8 @@ nav div img{
  /* user picture, siin vaja teha nii et pilt oleks vasakule tõstetud */
 #userpicture {
     height: 100%;
+    position: relative;
+    left: 90%;
 }
 
 nav div.search > input {
